@@ -1,0 +1,215 @@
+/*--------------------------------------------------------------
+#	about page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#3.1	page title
+--------------------------------------------------------------*/
+.about-page .page-title {
+	background-image: url(../images/page-title/img-7.jpg);
+}
+
+
+
+/*--------------------------------------------------------------
+#3.2	about-company-s2	
+--------------------------------------------------------------*/
+.about-company-s2 {
+	.section-title {
+		margin-bottom: 45px;
+
+		@include media-query(991px) {
+			margin-bottom: 35px;
+		}
+	}
+
+	/*** about compay slider ***/
+	.about-company-s2-slider .owl-controls {
+		margin: 30px 0 35px;
+
+		@include media-query(991px) {
+			margin: 20px 0 25px;
+		}
+	}
+
+	.about-company-s2-slider .owl-dots > div span,
+	.about-company-s2-slider .owl-dots > .active span {
+		width: 15px;
+		height: 15px;
+		background: $theme-primary-color;
+		@include linear-gradient-bg(left, $theme-primary-color, $theme-primary-color2);
+		margin: 0 10px 0 0;
+		position: relative;
+
+		@include media-query(767px) {
+			width: 13px;
+			height: 13px;
+			margin: 0 10px 0 0;
+		}
+
+	}
+
+	.about-company-s2-slider .owl-dots > div span:before {
+		content: "";
+		background: $white;
+		width: 11px;
+		height: 11px;
+		position: absolute;
+		left: 2px;
+		top: 2px;
+		@include rounded-border();
+
+		@include media-query(767px) {
+			width: 11px;
+			height: 11px;
+			left: 1px;
+			top: 1px;
+		}
+	}
+
+	.about-company-s2-slider .owl-dots > div:hover span,
+	.about-company-s2-slider .owl-dots > div:hover span:before,
+	.about-company-s2-slider .owl-dots > .active span,
+	.about-company-s2-slider .owl-dots > .active span:before  {
+		background: $theme-secondary-color;
+	}
+
+	.about-company-s2-slider-wrapper {
+		padding-bottom: 35px;
+		position: relative;
+
+		&:after {
+			content: "";
+			width: 97%;
+			height: 1px;
+			border-bottom: 1px solid lighten($black, 90%);
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			@include translatingX();
+		}
+
+		p {
+			text-align: center;
+			@include widther(992px) {
+				padding: 0 45px;
+			}
+		}
+	}
+
+	/*** mission ***/
+	.mission {
+		margin-top: 45px;
+
+		.section-title {
+			text-align: left;
+
+			h2 {
+				line-height: 1.2em;
+			}
+
+			h2:after {
+				left: 0;
+				-webkit-transform: none;
+				transform: none;
+			}
+		}
+
+
+		.details {
+			margin-top: 30px;
+
+			@include media-query(991px) {
+				margin-bottom: 100px;
+			}
+
+			@include media-query(767px) {
+				margin-bottom: 80px;
+			}
+		}
+
+		.details li {
+			font-size: calc-rem-value(17);
+			line-height: 1.7em;
+			color: $text-color;
+			margin-bottom: 22px;
+
+			@include media-query(991px) {
+				font-size: calc-rem-value(15);
+				margin-bottom: 15px;
+			}
+		}
+
+		.details li i {
+			display: inline-block;
+			padding-right: 5px;
+			color: $theme-secondary-color;
+		}
+
+		.details ul li:last-child {
+			margin-bottom: 0;
+		}
+
+		.details .right-col {
+			@include background-style("../images/about-page-video-bg.jpg", center center, cover, no-repeat, local);
+			text-align: center;
+			position: relative;
+
+			@include media-query(991px) {
+				margin: 45px 15px 0;
+			}
+
+			@include media-query(767px) {
+				height: 250px !important;
+			}
+
+			&:before {
+				content: "";
+				background: transparentize($theme-primary-color, 0.1);
+				@include linear-gradient-bg(left, transparentize($theme-primary-color, 0.1), transparentize($theme-primary-color2, 0.1));
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+
+			a {
+				font-size: calc-rem-value(35);
+				color: $white;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				@include center-by-translating();
+			}
+		}
+	}
+}
+
+
+/*** others ***/
+.about-page {
+	.team {
+		background-color: $heading-color;
+		.section-title h2 {
+			color: $white;
+
+			&:after {
+				background: $white;
+				@include linear-gradient-bg(left, $theme-secondary-color 46%, $heading-color 46.1%, $heading-color 54%, $theme-secondary-color 54.1%);
+				width: 105px;
+			}
+		}
+
+		.section-title p {
+			color: lighten($black, 80%);
+		}
+
+		.team-slider .owl-controls .owl-dots > div span:before {
+			background: $heading-color;
+		}
+
+		.team-slider .owl-controls .owl-dots > .active span:before {
+			background: $theme-secondary-color;
+		}
+	}
+}

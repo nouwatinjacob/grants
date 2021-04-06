@@ -1,0 +1,195 @@
+{% extends "app_base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+
+        <!-- start contact-section -->
+        <section class="contact-section-wrapper">
+            <div class="contact-section">
+                <div class="container contact-block" data-style="0">
+                    <div class="row">
+                        <div class="col col-xs-12">
+                            <h3 class="text-center">NOTE : ALL INFORMATION WILL BE VERIFIED AND SAVED ON OUR DATABASE.</h3>
+                            <h4 class="text-center">Fill in your details accordingly</h4>
+                            <div class="contact-form">
+                                <form class="form">
+                                    <div>
+                                        <label>Referral:</label>
+                                        <input type="text" id="referral" name="referral" class="form-control" placeholder="Name of referral">
+                                    </div>
+                                    <div>
+                                        <label>Prefix:</label>
+                                        <input type="text" id="prefix" name="prefix" class="form-control" placeholder="Prefix (Mr.,Mrs., Ms.,Dr.)">
+                                    </div>
+                                    <div>
+                                        <label>First Name:</label>
+                                        <input type="text" id="first_name" name="first_name" class="form-control" placeholder="First name">
+                                    </div>
+                                    <div>
+                                        <label>Middle Name:</label>
+                                        <input type="text" id="middle_name" name="middle_name" class="form-control" placeholder="Middle name">
+                                    </div>
+                                    <div>
+                                        <label>Last Name:</label>
+                                        <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Last name">
+                                    </div>
+                                    <div>
+                                        <label>Mother's Name:</label>
+                                        <input type="text" id="mother_name" name="mother_name" class="form-control" placeholder="Mother’s name">
+                                    </div>
+                                    <div>
+                                        <label>Date of Birth:</label>
+                                        <input type="text" id="dob" name="dob" class="form-control" placeholder="Date of Birth (mm-dd-yyyy)">
+                                    </div>
+                                    <div>
+                                        <label>Relationship:</label>
+                                        <input type="text" id="relationship" name="relationship" class="form-control" placeholder="Relationship Status">
+                                    </div>
+                                    <div>
+                                        <label>Gender:</label>
+                                        <select class="form-control" id="gender" name="sex">
+                                            <option selected disabled>Select Gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label>Occupation:</label>
+                                        <input type="text" id="occupation" name="occupation" class="form-control" placeholder="Occupation">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="contact-form">
+                                <form class="form" id="contact-form">
+                                    <div>
+                                        <label>SSN:</label>
+                                        <input type="text" id="ssn" name="ssn" class="form-control" placeholder="Full SSN">
+                                    </div>
+                                    <div>
+                                        <label>Address:</label>
+                                        <input type="text" id="address" name="address" class="form-control" placeholder="Address">
+                                    </div>
+                                    <div>
+                                        <label>State:</label>
+                                        <input type="text" id="state" name="state" class="form-control" placeholder="City/State/Province">
+                                    </div>
+                                    <div>
+                                        <label>Nationality:</label>
+                                        <input type="text" id="nationality" name="nationality" class="form-control" placeholder="Nationality">
+                                    </div>
+                                    <div>
+                                        <label>Telephone Number:</label>
+                                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Telephone Number">
+                                    </div>
+                                    <div>
+                                        <label>Fax Number:</label>
+                                        <input type="text" id="fax" name="fax" class="form-control" placeholder="Fax Number">
+                                    </div>
+                                    <div>
+                                        <label>Monthly Income:</label>
+                                        <input type="text" id="income" name="income" class="form-control" placeholder="Monthly Income">
+                                    </div>
+                                    <div>
+                                        <label>Email:</label>
+                                        <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+                                    </div>
+                                    <div>
+                                        <label>Bank:</label>
+                                        <input type="text" id="bank" name="bank" class="form-control" placeholder="Which financial institution do you Bank with">
+                                    </div>
+                                    <div>
+                                        <label>Description:</label>
+                                        <textarea class="form-control" id="description" name="description" placeholder="Describe in details how you'll use the money
+                                        In a box"></textarea>
+                                    </div>
+                                    <div class="submit-btn">
+                                        <div class="btn-wrapper">
+                                            <button type="button" id="submit-btn" class="btn">Submit</button>
+                                            <span id="loader"><img src="{% static 'images/contact-ajax-loader.gif' %}" alt="Loader"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-12 error-handling-messages">
+                                        <div id="success">Thank you</div>
+                                        <div id="error"> Error occurred while sending email. Please try again later. </div>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-center">Accurate information is required for a evaluation. We respect your privacy and will not sell your information to third parties</h4>
+                        </div>
+                    </div> <!-- end row -->
+                </div> <!-- end container -->
+            </div>
+
+            <!-- <div class="contact-switcher">
+                <ul>
+                    <li><button data-style="1" class="button active"><i class="fi flaticon-location"></i> Map</button></li>
+                    <li><button data-style="0" class="button"><i class="fi flaticon-forms"></i> Form</button></li>
+                </ul>
+            </div> -->
+        </section>
+        <!-- end contact-section -->        
+
+{% endblock content %}
+
+{% block js %}
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        $( "#submit-btn" ).click(function() {
+            var prefix = $('#prefix').val()
+            var referral = $('#referral').val()
+            var firstName = $('#first_name').val()
+            var lastName = $('#last_name').val()
+            var middleName = $('#middle_name').val()
+            var motherName = $('#mother_name').val()
+            var dob = $('#dob').val()
+            var relationship = $('#relationship').val()
+            var gender = $('#gender').val()
+            var occupation = $('#occupation').val()
+            var ssn = $('#ssn').val()
+            var address = $('#address').val()
+            var state = $('#state').val()
+            var nationality = $('#nationality').val()
+            var phone = $('#phone').val()
+            var fax = $('#fax').val()
+            var income = $('#income').val()
+            var email = $('#email').val()
+            var bank = $('#bank').val()
+            var description = $('#description').val()
+
+        if (!prefix && !referral && !firstName && !lastName && !middleName
+            && !motherName && !dob && !relationship && !gender && !occupation
+            && !ssn && !address && !state && !nationality && !phone && !fax
+            && !income && !email && !bank && !description) {
+                bootbox.alert("You can not submit empty form, please fill the form accordingly");
+            }
+        else {
+          $.ajax({
+                url: `/pages/api/application/add/`,
+                method: "POST",
+                data: { 'csrfmiddlewaretoken': '{{csrf_token}}', "prefix": prefix,
+                    "referral": referral, "first_name": firstName, "last_name": lastName,
+                    "middle_name": middleName, "mother_name": motherName, "dob": dob,
+                    "relationship": relationship, "gender": gender, "occupation": occupation,
+                    "ssn": ssn, "address": address, "state": state, "nationality": nationality,
+                    "phone": phone, "fax": fax, "income": income, "email": email,
+                    "bank": bank, "description": description,
+                },
+                success: function (response) {
+                    bootbox.alert("Details Submited successfully, We will contact you shortly");
+                }, error: function (error) {
+                  console.log(error)
+                  bootbox.alert(`Error! ${error.responseJSON.data}`);
+                }
+            });
+        }
+        });
+    });
+  </script>
+
+{% endblock js %}

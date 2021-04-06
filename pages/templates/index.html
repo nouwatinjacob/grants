@@ -1,0 +1,339 @@
+{% extends "app_base.html" %}
+{% load static %}
+
+
+{% block content %}
+        <!-- start of hero --> 
+        <div class="navigation navbar navbar-default" style="background-color: #fdb81e; opacity: 1; position: sticky; z-index: 100;">
+            <h4>
+                <strong>‎Reminder:</strong> The federal government are using the money to assist people...this is the specific place for those who need assistance paying 
+                for bills, unemployed, buying a home starting their own business, disabled, going to school, semi retired, or even helping raise their children with old and retired  citizens or anyone living in the state
+            </h4>
+        </div>
+         <section class="slider-section">
+            
+            <div class="tp-banner-container">
+                <div class="tp-banner" >
+                    <ul>
+                        <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-delay="10000" data-thumb="{% static 'images/slider/biden.jpeg' %}"  data-title="We are Consult Care" >
+                            <!-- MAIN IMAGE -->
+                            <img src="{% static 'images/slider/biden.jpeg' %}"  alt="newslide2014_1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                            <!-- LAYERS -->
+
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption main-heading customin customout"
+                                data-x="25"
+                                data-y="210"
+                                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                data-speed="1800"
+                                data-start="500"
+                                data-easing="Power3.easeInOut"
+                                data-splitin="chars"
+                                data-splitout="chars"
+                                data-elementdelay="0.08"
+                                data-endelementdelay="0.08"
+                                data-end="8000"
+                                data-endspeed="500"
+                                style="z-index: 2; color: white;"> <h1>Convenience Comes to <br> Federal Grants</h1>
+                            </div>
+                            
+
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption slider-text rs-parallaxlevel-0"
+                                data-x="25" 
+                                data-y="460"
+                                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                data-speed="2000"
+                                data-start="3300"
+                                data-easing="Power3.easeInOut"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-end="9000"
+                                data-endspeed="2000"
+                                data-linktoslide="next"
+                                style="z-index: 8; color: white;"> ConsultCare is an international consultancy that provides connected thinking, <br> insight and capability to industry leading organisations.
+                                <br> Click here to know more about the claim agent
+                            </div>
+
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption lfb ltt"
+                                data-x="25"
+                                data-y="570"
+                                data-speed="1800"
+                                data-start="4500"
+                                data-easing="Power4.easeOut"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.01"
+                                data-endelementdelay="0.1"
+                                data-end="11000"
+                                data-endspeed="1800"
+                                data-endeasing="Power4.easeOut"
+                                style="z-index: 3;">
+                                <div class="link-button hidden-xs">
+                                    <a href="#agent" class="btn slider-btn">Meet Agent</a>
+                                    <a href="{% url 'pages:application' %}" class="btn slider-btn">Apply now</a>
+                                </div> <!-- link-button -->
+                            </div>
+                        </li>
+                        <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-delay="10000" data-thumb="images/slider/biden.jpeg" data-title="We are Consult Care" >
+                            <!-- MAIN IMAGE -->
+                            <img src="{% static 'images/slider/biden.jpeg' %}"  alt="newslide2014_1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                            <!-- LAYERS -->
+
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption main-heading customin customout"
+                                data-x="25"
+                                data-y="210"
+                                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                data-speed="1800"
+                                data-start="500"
+                                data-easing="Power3.easeInOut"
+                                data-splitin="chars"
+                                data-splitout="chars"
+                                data-elementdelay="0.08"
+                                data-endelementdelay="0.08"
+                                data-end="8000"
+                                data-endspeed="500"
+                                style="z-index: 2; color: white;"> <h1>Convenience Comes to <br> Federal Grants</h1>
+                            </div>
+                            
+
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption slider-text rs-parallaxlevel-0"
+                                data-x="25" 
+                                data-y="460"
+                                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                data-speed="2000"
+                                data-start="3300"
+                                data-easing="Power3.easeInOut"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-end="9000"
+                                data-endspeed="2000"
+                                data-linktoslide="next"
+                                style="z-index: 8; color: white;"> ConsultCare is an international consultancy that provides connected thinking, <br> insight and capability to industry leading organisations.
+                                <br> Click here to know more about the claim agent
+                            </div>
+
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption lfb ltt"
+                                data-x="25"
+                                data-y="570"
+                                data-speed="1800"
+                                data-start="4500"
+                                data-easing="Power4.easeOut"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.01"
+                                data-endelementdelay="0.1"
+                                data-end="11000"
+                                data-endspeed="1800"
+                                data-endeasing="Power4.easeOut"
+                                style="z-index: 3;">
+                                <div class="link-button hidden-xs">
+                                    <a href="#agent" class="btn slider-btn">Meet Agent</a>
+                                    <a href="{% url 'pages:application' %}" class="btn slider-btn">Apply now</a>
+                                </div> <!-- link-button -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>    
+        <!-- end of hero slider -->
+
+        
+        <!-- start featured -->
+        <section class="featured section-padding">
+            <div class="container">
+                <div class="row section-title">
+                    <div class="col col-md-8 col-md-offset-2">
+                        <h2>Testimonials</h2>
+                    </div>
+                </div> <!-- end section-title -->
+                <div class="row content">
+                    <div class="col col-lg-4 col-xs-6">
+                        <div class="grid">
+                            <div class="img-holder">
+                                <video class="img img-responsive" style="height: 439px !important; width: 650px !important; background-color: #e6e6e6;" 
+                                width="650" height="439" controls>
+                                    <source src="{% static 'video/video1.mp4' %}" type="video/mp4">
+                                    <source src="movie.ogg" type="video/ogg">
+                                  Your browser does not support the video tag.
+                                  </video>
+                                <!-- <img src="{% static 'images/featured/img-1.jpg' %}" alt class="img img-responsive"> -->
+                            </div>
+                            <!-- <div class="details">
+                                <h3>Financial services <i class="fi flaticon-money-2"></i></h3>
+                                <p>We’re the leading consulting partner to the private equity industry and its key stakeholders. We advise investors across the entire investment life cycle.</p>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col col-lg-4 col-xs-6">
+                        <div class="grid">
+                            <div class="img-holder">
+                                <video class="img img-responsive" style="height: 439px !important; width: 650px !important; background-color: #e6e6e6;"
+                                width="650" height="439" controls>
+                                    <source src="{% static 'video/video2.mp4' %}" type="video/mp4">
+                                    <source src="movie.ogg" type="video/ogg">
+                                  Your browser does not support the video tag.
+                                  </video>
+                                <!-- <img src="{% static 'images/featured/img-2.jpg' %}" alt class="img img-responsive"> -->
+                            </div>
+                            <!-- <div class="details">
+                                <h3>Private Equity <i class="fi flaticon-folder"></i></h3>
+                                <p>We’re the leading consulting partner to the private equity industry and its key stakeholders. We advise investors across the entire investment life cycle.</p>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col col-lg-4 col-xs-6">
+                        <div class="grid">
+                            <div class="img-holder">
+                                <video class="img img-responsive" style="height: 439px !important; width: 650px !important; background-color: #e6e6e6;" 
+                                width="650" height="439" controls>
+                                    <source src="{% static 'video/video4.mp4' %}" type="video/mp4">
+                                    <source src="movie.ogg" type="video/ogg">
+                                  Your browser does not support the video tag.
+                                </video>
+                                <!-- <img src="{% static 'images/featured/img-3.jpg' %}" alt class="img img-responsive"> -->
+                            </div>
+                            <!-- <div class="details">
+                                <h3>Healthcare <i class="fi flaticon-medical"></i></h3>
+                                <p>We’re the leading consulting partner to the private equity industry and its key stakeholders. We advise investors across the entire investment life cycle.</p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end featured -->
+
+
+
+        <!-- start testimonials-->
+        <section class="testimonials section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-4 left-col">
+                        <div class="section-title">
+                            <h2>Reviews</h2>
+                            <p>We deliver true results, focusing on strategic decisions and practical actions tailored to our clients' unique reality.</p>
+                        </div>
+
+                        <a href="{% url 'pages:application' %}" class="btn theme-btn">Apply now</a>
+                    </div>
+
+                    <div class="col col-md-8">
+                        <div class="testimonials-slider">
+                            <div class="box">
+                                <div class="client-pic">
+                                    <img src="{% static 'images/testimonials/img-1.jpg' %}" alt class="img img-responsive">
+                                </div>
+                                <div class="details">
+                                    <h4>Amy Adams</h4>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <p>This is the best Agent I have encountered. I was able to redeem my grant within some days.</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="client-pic">
+                                    <img src="{% static 'images/testimonials/img-2.jpg' %}" alt class="img img-responsive">
+                                </div>
+                                <div class="details">
+                                    <h4>Jimmy Tallon</h4>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <p>We've worked with the majority of the Global 500, thousands of major regional and local organizations.</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="client-pic">
+                                    <img src="{% static 'images/testimonials/img-3.jpg' %}" alt class="img img-responsive">
+                                </div>
+                                <div class="details">
+                                    <h4>Amy Adams</h4>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <p>We've worked with the majority of the Global 500, thousands of major regional and local organizations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end testimonials-->
+
+
+        <!-- start contact-section -->
+        <section class="contact-section-wrapper" id="agent">
+            <div class="contact-section">
+                <div class="container contact-block" data-style="0">
+                    <div class="row">
+                        <div class="col col-xs-12">
+                            <h2>Stephen Karns is a Dallas-based civilian lawyer who specializes 
+                                in defending U.S citizens
+                            </h2>
+                            <div class="contact-info">
+                                <p>Law firm office of personnel management</p>
+                                <ul>
+                                    <li>
+                                        <span class="icon">
+                                            <i class="fi flaticon-telephone"></i>
+                                        </span>
+                                        (207) 544-1566
+                                    </li>
+                                    <li>
+                                        <span class="icon">
+                                            <i class="fi flaticon-mail-black-envelope-symbol"></i>
+                                        </span>
+                                        theworldfundagency@gmail.com
+                                    </li>
+                                    <li>
+                                        <span class="icon">
+                                            <i class="fi flaticon-mail-black-envelope-symbol"></i>
+                                        </span>
+                                        grantfundagency2@gmail.com
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="contact-form">
+                                <img src="{% static 'images/agent.jpg' %}" alt style="height: 400px !important;" class="img img-responsive rounded-circle">
+                            </div>
+                        </div>
+                    </div> <!-- end row -->
+                </div> <!-- end container -->
+            </div>
+
+            <!-- <div class="contact-switcher">
+                <ul>
+                    <li><button data-style="1" class="button active"><i class="fi flaticon-location"></i> Map</button></li>
+                    <li><button data-style="0" class="button"><i class="fi flaticon-forms"></i> Form</button></li>
+                </ul>
+            </div> -->
+        </section>
+        <!-- end contact-section -->
+
+
+{% endblock content %}

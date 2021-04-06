@@ -1,0 +1,73 @@
+/*--------------------------------------------------------------
+#	team style 2 page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#13.1	page title
+--------------------------------------------------------------*/
+.team-s2-page .page-title {
+	background-image: url(../images/page-title/img-4.jpg);
+}
+
+
+
+/*--------------------------------------------------------------
+#13.2	team-s2-content
+--------------------------------------------------------------*/
+.team-s2-page .team-s2-grids {
+	& > .col {
+		margin-bottom: 60px;
+
+		@include media-query(767px) {
+			margin-bottom: 50px;
+		}
+
+		@include media-query(500px) {
+			width: 100%;
+		}
+	}
+
+	.member-details {
+		padding-top: 20px;
+	}
+
+	.member-details h3 {
+		font-size: calc-rem-value(22);
+		font-weight: normal;
+		margin: 0 0 0.28em;
+
+		@include media-query(767px) {
+			font-size: calc-rem-value(18);
+		}
+	}
+
+	.member-details > span {
+		color: lighten($black, 60%);
+		display: block;
+		margin-bottom: 15px;
+	}
+
+	.member-details .view-profile {
+		display: inline-block;
+		color: $theme-secondary-color;
+		font-weight: bold;
+		margin-top: 20px;
+
+		@include media-query(767px) {
+			margin-top: 10px;
+		}
+	}
+
+	
+}
+
+.team-s2-page .page-pagination-row {
+	margin-top: 40px;
+
+	@include media-query(991px) {
+		margin: 10px 0 100px;
+	}
+
+	@include media-query(767px) {
+		margin: 10px 0 80px;
+	}
+}

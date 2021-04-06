@@ -1,0 +1,101 @@
+{% load static %}
+        <!-- Start header -->
+        <header class="site-header">
+
+            <!-- start upper-topbar -->
+            <div class="upper-topbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-md-7 contact-info">
+                            <ul>
+                                <li><i class="fi flaticon-letter"></i> grantfundagency2@gmail.com,</li>
+                                <li>theworldfundagency@gmail.com</li>
+                            </ul>
+                        </div>
+
+                        <div class="col col-md-5">
+                            <div class="login-language">
+                                <div class="login-register">
+                                    <span class="fi flaticon-key"></span>
+                                    <ul>
+                                        <li><a href="#">Login</a></li>
+                                        <li><a href="#">Register</a></li>
+                                    </ul>
+                                </div>
+                                <div class="language">
+                                    <span>Lang: </span>
+                                    <form>
+                                        <select class="selectpicker">
+                                            <option>ENG</option>
+                                            <option>TUK</option>
+                                            <option>SPH</option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end row -->
+                </div> <!-- end container -->
+            </div>
+            <!-- end upper-topbar -->
+
+
+            <div class="lower-topbar">
+                <div class="container">
+                    <div class="row lower-topbar">
+                        <div class="col col-sm-3">
+                            <a class="logo" href="#"><img src="{% static 'images/logo.png' %}" alt class="img img-responsive"></a>
+                        </div>
+                        <div class="col col-sm-9">
+                            <div class="company-info">
+                                <ul>
+                                    <li>
+                                        <span class="fi flaticon-time"></span>
+                                        <h4>Opening hours</h4>
+                                        <span class="info">Mon - Fri: 9 am - 7 pm</span>
+                                    </li>
+                                    <li>
+                                        <span class="fi flaticon-technology"></span>
+                                        <h4>Call us</h4>
+                                        <span class="info">(207) 544-1566</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>            
+
+            <nav class="navigation navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <button class="close-navbar"><i class="fa fa-close"></i></button>
+                        <ul class="nav navbar-nav">
+                            <li class="current"><a href="{% url 'pages:index' %}">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#">Applicants</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div><!-- end of nav-collapse -->
+
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div><!-- end of container -->
+            </nav>
+        </header>
+        <!-- end of header -->

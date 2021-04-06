@@ -1,0 +1,131 @@
+/*--------------------------------------------------------------
+#	case studies style 2 page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#8.1	page title
+--------------------------------------------------------------*/
+.case-studies-page-style2 .page-title {
+	background-image: url(../images/page-title/img-8.jpg);
+}
+
+
+
+/*--------------------------------------------------------------
+#8.2	case-studies-s2-content-wrapper
+--------------------------------------------------------------*/
+.case-studies-s2-content {
+	@include media-query(991px) {
+		margin-bottom: 100px;
+	}
+
+	@include media-query(767px) {
+		margin-bottom: 80px;
+	}
+
+	> .row {
+		margin-bottom: 35px;
+		
+		@include media-query(767px) {
+			text-align: center;
+			margin-bottom: 50px;
+		}
+
+		.img-holder img {
+			display: inline-block;
+		}
+
+	}
+
+	> .row:last-child {
+		margin-top: 100px;
+		margin-bottom: 0;
+
+		@include media-query(991px) {
+			margin-top: 80px;
+		}
+
+		@include media-query(767px) {
+			margin-top: 50px;
+		}
+	}
+
+	.details {
+		@include media-query(767px) {
+			margin-top: 20px;
+		}
+
+		h3 {
+			font-size: calc-rem-value(28);
+			font-weight: normal;
+			line-height: 1.2em;
+			margin: 0 0 0.38em;
+
+			@include media-query(1199px) {
+				font-size: calc-rem-value(22);
+			}
+
+			@include media-query(767px) {
+				font-size: calc-rem-value(18);
+			}
+		}
+
+		> span {
+			display: block;
+			color: $text-color;
+		}
+
+		.read-more {
+			background: $theme-primary-color;
+			@include linear-gradient-bg(left, $theme-primary-color, $theme-primary-color2);
+			width: 135px;
+			height: 42px;
+			display: inline-block;
+			margin-top: 58px;
+			position: relative;
+
+			@include media-query(1199px) {
+				margin-top: 50px;
+			}
+
+			@include media-query(767px) {
+				width: 126px;
+				height: 36px;
+				margin-top: 20px;
+			}
+		}
+
+		.read-more a {
+			background: $white;
+			display: block;
+			width: 131px;
+			height: 38px;
+			line-height: 34px;
+			font-size: calc-rem-value(16);
+			color: $theme-secondary-color;
+			padding: 0;
+			text-transform: capitalize;
+			position: absolute;
+			left: 2px;
+			top: 2px;
+			@include rounded-border(0);
+
+			@include media-query(767px) {
+				width: 124px;
+				height: 34px;
+				line-height: 30px;
+				font-size: calc-rem-value(15);
+				left: 1px;
+				top: 1px;
+			}
+		}
+
+		.read-more:hover {
+			background: $theme-secondary-color;
+		}
+
+		.read-more:hover a {
+			background: $theme-secondary-color;
+			color: $white;
+		}
+	}
+}

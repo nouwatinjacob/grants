@@ -1,0 +1,166 @@
+/*--------------------------------------------------------------
+#	team single page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#14.1	team-single-content
+--------------------------------------------------------------*/
+.team-single-content {
+
+	.member-details {
+		@include media-query(767px) {
+			margin-top: 35px;
+		}
+	}
+
+
+	/*** member details ***/
+	.member-details h3 {
+		font-size: calc-rem-value(32);
+		font-weight: normal;
+		margin: 0 0 0.17em;
+		text-transform: capitalize;
+
+		@include media-query(991px) {
+			font-size: calc-rem-value(26);
+		}
+
+		@include media-query(767px) {
+			font-size: calc-rem-value(22);
+		}
+	}
+
+	.member-details > span {
+		display: block;
+		color: lighten($black, 65%);
+		margin-bottom: 15px;
+	}
+
+	.member-info {
+		margin-top: 35px;
+
+		@include media-query(767px) {
+			margin-top: 20px;
+		}
+	}
+
+	.member-info > li {
+		position: relative;
+		padding-left: 45px;
+		color: $text-color;
+		margin-bottom: 15px;
+
+		@include media-query(991px) {
+			padding-left: 35px;
+		}
+
+		& > i {
+			position: absolute;
+			left: 0;
+			top: 3px;
+			font-size: 22px;
+			color: $theme-secondary-color;
+
+			@include media-query(991px) {
+				font-size: 18px;
+			}
+		}
+	}
+
+	.member-info > li > ul {
+		overflow: hidden;
+
+		li {
+			float: left;
+			margin: 0 15px 0 0;
+
+			@include media-query(991px) {
+				margin: 0 10px 0 0;
+			}
+		}
+
+		li:first-child a {
+			background-color: $linkedin-color;
+		}
+
+		li:last-child a {
+			background-color: $twitter-color;
+		}
+
+		a {
+			background-color: $facebook-color;
+			width: 28px;
+			height: 28px;
+			line-height: 28px;
+			display: block;
+			font-size: 18px;
+			color: $white;
+			padding: 0 5px;
+			text-align: center;
+			@include rounded-border(5px);
+
+			@include media-query(991px) {
+				width: 25px;
+				height: 25px;
+				line-height: 25px;
+				font-size: 15px;
+			}
+		}
+	}
+
+	/*** experience ***/
+	.experience {
+		margin-top: 50px;
+
+		@include media-query(991px) {
+			margin: 40px -15px 100px;
+		}
+
+		@include media-query(767px) {
+			margin: 40px -15px 80px;
+		}
+
+		& > .col:last-child {
+			@include widther(1200px) {
+				padding-right: 90px;
+			}
+
+			span {
+				font-weight: bold;
+			}
+
+			@include media-query(767px) {
+				margin-top: 35px;
+			}
+		}
+
+		h4 {
+			font-size: calc-rem-value(26);
+			font-weight: normal;
+			margin: 0 0 0.78em;
+
+			@include media-query(991px) {
+				font-size: calc-rem-value(22);
+			}
+
+			@include media-query(767px) {
+				font-size: calc-rem-value(18);
+			}
+		}
+
+		ul li {
+			margin-bottom: 10px;
+			line-height: 1.7em;
+		}
+
+		ul li i {
+			color: $theme-secondary-color;
+			display: include;
+			padding-right: 3px;
+		}
+
+		ul li:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+

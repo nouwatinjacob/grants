@@ -1,0 +1,37 @@
+/*--------------------------------------------------------------
+#	case studies page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#7.1	page title
+--------------------------------------------------------------*/
+.case-studies-page .page-title {
+	background-image: url(../images/page-title/img-8.jpg);
+}
+
+
+
+/*--------------------------------------------------------------
+#7.2	case-studies
+--------------------------------------------------------------*/
+.case-studies {
+
+	.case-studies-grids > .col {
+		margin-bottom: 80px;
+
+		@include media-query(767px) {
+			margin-bottom: 50px;
+		}
+
+		@include media-query(550px) {
+			width: 100%;
+		}
+	}
+
+	.page-pagination {
+		margin-top: 40px;
+
+		@include media-query(991px) {
+			margin-top: 20px;
+		}
+	}
+}
