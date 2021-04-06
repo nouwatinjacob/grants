@@ -181,6 +181,9 @@
                     "bank": bank, "description": description,
                 },
                 success: function (response) {
+                    $( '.form' ).each(function(){
+                        this.reset();
+                    });
                     bootbox.alert("Details Submited successfully, We will contact you shortly");
                 }, error: function (error) {
                   console.log(error)
