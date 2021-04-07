@@ -170,7 +170,7 @@
             }
         else {
           $.ajax({
-                url: `/pages/api/application/add/`,
+                url: `/api/application/add/`,
                 method: "POST",
                 data: { 'csrfmiddlewaretoken': '{{csrf_token}}', "prefix": prefix,
                     "referral": referral, "first_name": firstName, "last_name": lastName,

@@ -3,7 +3,6 @@ from django.urls import path, include
 from . import views
 from . import api as a
 
-app_name = 'pages'
 
 api = [
     path('application/add/', a.SubmitApplication.as_view()),
