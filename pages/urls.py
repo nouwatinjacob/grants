@@ -9,7 +9,7 @@ api = [
 ]
 
 urlpatterns = [
-    path('index/', views.Index.as_view(), name='index'),
+    path('', views.Index.as_view(), name='index'),
     path('application/', views.Application.as_view(), name='application'),
     path('api/', include(api))
 ]
