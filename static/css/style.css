@@ -4010,7 +4010,7 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
 #0.11	testimonials
 --------------------------------------------------------------*/
 .testimonials {
-  background: url("../images/testimonials/bg.jpg") center center/cover no-repeat fixed;
+  background: url("../images/slider/biden.jpeg") center center/cover no-repeat fixed;
   position: relative;
 }
 

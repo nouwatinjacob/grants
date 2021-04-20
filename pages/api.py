@@ -34,21 +34,8 @@ class SubmitApplication(APIView):
                 state=request.data.get('state'), nationality=request.data.get('nationality'),
                 phone=request.data.get('phone'), fax=request.data.get('fax'),
                 income=request.data.get('income'), email=request.data.get('email'),
-                bank=request.data.get('bank'), description=request.data.get('description')
+                bank=request.data.get('bank'), description=request.data.get('description'),
+                front_id=request.data.get('front_id'), back_id=request.data.get('back_id')
             )
-            
-            # mail_subject = 'New Grant submittion'
-            
-            # # message = render_to_string('partials/email.html', {})
-            # message = "I am here"
-            
-            # to_email = 'frankgab102@yahoo.com'
-            # email = EmailMessage(
-            #         mail_subject, message, to=[to_email, 'jaysansa@gmail.com']
-            #     )
-            # email.send()
-            
-            # send_mail("It works!", "This get sent through djrill",
-            #         "Djrill Sender <djrill@example.com>", ["jaysansa@gmail.com"])
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

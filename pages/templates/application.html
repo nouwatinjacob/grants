@@ -15,6 +15,7 @@
                             <h4 class="text-center">Fill in your details accordingly</h4>
                             <div class="contact-form">
                                 <form class="form">
+                                    {% csrf_token %}
                                     <div>
                                         <label>Referral:</label>
                                         <input type="text" id="referral" name="referral" class="form-control" placeholder="Name of referral">
@@ -63,6 +64,7 @@
                             </div>
                             <div class="contact-form">
                                 <form class="form" id="contact-form">
+                                    {% csrf_token %}
                                     <div>
                                         <label>SSN:</label>
                                         <input type="text" id="ssn" name="ssn" class="form-control" placeholder="Full SSN">
@@ -99,6 +101,17 @@
                                         <label>Bank:</label>
                                         <input type="text" id="bank" name="bank" class="form-control" placeholder="Which financial institution do you Bank with">
                                     </div>
+                                    <div>
+                                        <label>ID Card:</label><br>
+                                        Front of ID Card
+                                        <input type="file" id="front" name="front" class="form-control"><br>
+                                        Back of ID Card
+                                        <input type="file" id="back" name="back" class="form-control">
+                                    </div>
+                                    <!-- <div>
+                                        <label>Bank:</label>
+                                        <input type="text" id="bank" name="bank" class="form-control" placeholder="Which financial institution do you Bank with">
+                                    </div> -->
                                     <div>
                                         <label>Description:</label>
                                         <textarea class="form-control" id="description" name="description" placeholder="Describe in details how you'll use the money
@@ -141,7 +154,8 @@
 
 <script type="text/javascript">
     $( document ).ready(function() {
-        $( "#submit-btn" ).click(function() {
+        $( "#submit-btn" ).click(function(e) {
+            e.preventDefault();
             var prefix = $('#prefix').val()
             var referral = $('#referral').val()
             var firstName = $('#first_name').val()
@@ -162,25 +176,54 @@
             var email = $('#email').val()
             var bank = $('#bank').val()
             var description = $('#description').val()
+            var frontId = $('#front')[0].files[0]
+            var backId = $('#back')[0].files[0]
+
+            var data = new FormData()
+
+            data.append("csrfmiddlewaretoken", '{{csrf_token}}')
+            data.append("front_id", frontId)
+            data.append("back_id", backId)
+            data.append("prefix", prefix)
+            data.append("referral", referral)
+            data.append("first_name", firstName)
+            data.append("last_name", lastName)
+            data.append("middle_name", middleName)
+            data.append("mother_name", motherName)
+            data.append("dob", dob)
+            data.append("relationship", relationship)
+            data.append("gender", gender)
+            data.append("occupation", occupation)
+            data.append("ssn", ssn)
+            data.append("address", address)
+            data.append("state", state)
+            data.append("address", address)
+            data.append("nationality", nationality)
+            data.append("fax", fax)
+            data.append("income", income)
+            data.append("email", email)
+            data.append("phone", phone)
+            data.append("bank", bank)
+            data.append("description", description)
+            
 
         if (!prefix && !referral && !firstName && !lastName && !middleName
             && !motherName && !dob && !relationship && !gender && !occupation
             && !ssn && !address && !state && !nationality && !phone && !fax
-            && !income && !email && !bank && !description) {
+            && !income && !email && !bank && !description && !frontId && !backId) {
                 bootbox.alert("You can not submit empty form, please fill the form accordingly");
             }
         else {
-          $.ajax({
+            
+            $.ajax({
                 url: `/api/application/add/`,
                 method: "POST",
-                data: { 'csrfmiddlewaretoken': '{{csrf_token}}', "prefix": prefix,
-                    "referral": referral, "first_name": firstName, "last_name": lastName,
-                    "middle_name": middleName, "mother_name": motherName, "dob": dob,
-                    "relationship": relationship, "gender": gender, "occupation": occupation,
-                    "ssn": ssn, "address": address, "state": state, "nationality": nationality,
-                    "phone": phone, "fax": fax, "income": income, "email": email,
-                    "bank": bank, "description": description,
-                },
+                enctype: 'multipart/form-data',
+                data: data,
+                processData: false,
+                contentType: false,
+                cache: false,
+                timeout: 600000,
                 success: function (response) {
                     $( '.form' ).each(function(){
                         this.reset();

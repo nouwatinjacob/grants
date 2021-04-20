@@ -11,7 +11,7 @@ class Application(models.Model):
     last_name = models.CharField(_("Last name"), max_length=100, blank=True, null=True)
     middle_name = models.CharField(_("Middle name"), max_length=100, blank=True, null=True)
     dob = models.CharField(_("Date of Birth"), max_length=100, blank=True, null=True)
-    mother_name = models.CharField(_("Nother name"), max_length=100, blank=True, null=True)
+    mother_name = models.CharField(_("Mother name"), max_length=100, blank=True, null=True)
     relationship = models.CharField(_("Relationship Status"), max_length=100, blank=True, null=True)
     gender = models.CharField(_("Gender"), max_length=100, blank=True, null=True)
     occupation = models.CharField(_("Occupation"), max_length=100, blank=True, null=True)
@@ -25,6 +25,10 @@ class Application(models.Model):
     email = models.EmailField(_("Email"), max_length=100, blank=True, null=True)
     bank = models.CharField(_("Financial Institution"), max_length=100, blank=True, null=True)
     description = models.CharField(_("Describe in details how you'll use the money"), max_length=250, blank=True, null=True)
+    front_id = models.ImageField(_("Front of ID Card"), upload_to='images/', blank=True, null=True)
+    back_id = models.ImageField(_("Back of ID Card"), upload_to='images/', blank=True, null=True)
     
     def __str__(self):
-        return self.first_name
+        if self.first_name:
+            return self.first_name
+        return ''
